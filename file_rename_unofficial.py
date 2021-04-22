@@ -1,9 +1,10 @@
 import os
 
 #getting the list of the files in a folder
-inp = input("Enter your directory: \n   ")
+inp = str(input("Enter your directory: \n   "))
+inp = inp.replace('\\','/')
 
-lists = os.listdir(str(inp))
+lists = os.listdir(inp)
 
 
 #the following function is for better organization
