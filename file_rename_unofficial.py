@@ -17,7 +17,7 @@ def printf(a):
 
 srt = []
 for file in lists:
-    if file[-3] == "srt":
+    if file[-3:] == "srt":
         srt.append(file)
 
 printf(srt)
@@ -37,4 +37,4 @@ for file in srt:
         k += 1
     else:
         k += 1
-    os.rename(f"{inp}" + "/" + f"{file}",f"{ep_name}")
+    os.rename(f"{inp}" + "/" + f"{file}",f"{inp}" + "/" + f"{ep_name}")
