@@ -1,8 +1,15 @@
 import os
 
 # getting the list of the files in a folder
-inp = str(input("Enter your directory: \n   "))
-inp = inp.replace('\\', '/')
+q = ''
+inp = ''
+while True:
+    inp = input("Enter your directory: \n   ")
+    inp = inp.replace('\\', '/')
+    print(inp)
+    q = input("is the directory correct? ")
+    if q == ("yes" or "y"):
+        break
 
 lists = os.listdir(inp)
 
@@ -22,7 +29,7 @@ for file in lists:
         srt.append(file)
 
 printf(srt)
-
+'''
 # now we need to have the name of the episode
 print("Enter the name of the episode: ")
 ep_name = str(input("\"Please replace the number of the episode with {b}\n"
@@ -40,3 +47,4 @@ for file in srt:
     else:
         k += 1
     os.rename(f"{inp}" + "/" + f"{file}", f"{inp}" + "/" + f"{ep_name}")
+'''
